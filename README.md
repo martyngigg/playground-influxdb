@@ -14,11 +14,18 @@ Navigate to the project directory
 cd tig-stack
 ```
 
-Change the environment variables define in `.env` that are used to setup and deploy the stack
+Copy the environment template file, `.env.template`,  `.env` file
+
+```bash
+cp .env.template .env
+```
+
+Update the environment variables used to setup and deploy the stack inside `.env`
 
 ```bash
 ├── telegraf/
 ├── .env         <---
+├── .env.template
 ├── docker-compose.yml
 ├── entrypoint.sh
 └── ...
@@ -30,6 +37,7 @@ Customize the `telegraf.conf` file which will be mounted to the container as a p
 ├── telegraf/
 │   ├── telegraf.conf <---
 ├── .env
+├── .env.template
 ├── docker-compose.yml
 ├── entrypoint.sh
 └── ...

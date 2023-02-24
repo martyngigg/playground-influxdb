@@ -1,0 +1,2 @@
+# No environment files as they contain secrets
+.env
